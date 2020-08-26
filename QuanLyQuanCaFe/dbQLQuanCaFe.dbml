@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyQuanCafe" Class="dbQLQuanCaFeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True" SettingsObjectName="QuanLyQuanCaFe.Properties.Settings" SettingsPropertyName="QuanLyQuanCafeConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DanhMucHang" Member="DanhMucHangs">
+    <Type Name="DanhMucHang">
+      <Column Name="MaDanhMuc" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDanhMuc" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="DanhMucHang_Mon" Member="Mons" ThisKey="MaDanhMuc" OtherKey="MaDanhMuc" Type="Mon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HoaDon" Member="HoaDons">
+    <Type Name="HoaDon">
+      <Column Name="MaHoaDon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GioVao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="HoaDon_ThongTinHoaDon" Member="ThongTinHoaDons" ThisKey="MaHoaDon" OtherKey="MaHoaDon" Type="ThongTinHoaDon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mon" Member="Mons">
+    <Type Name="Mon">
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaDanhMuc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Mon_ThongTinHoaDon" Member="ThongTinHoaDons" ThisKey="MaMon" OtherKey="MaMon" Type="ThongTinHoaDon" />
+      <Association Name="DanhMucHang_Mon" Member="DanhMucHang" ThisKey="MaDanhMuc" OtherKey="MaDanhMuc" Type="DanhMucHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="MaNhanVien" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ViTri" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinHoaDon" Member="ThongTinHoaDons">
+    <Type Name="ThongTinHoaDon">
+      <Column Name="MaTTHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaHoaDon" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Mon_ThongTinHoaDon" Member="Mon" ThisKey="MaMon" OtherKey="MaMon" Type="Mon" IsForeignKey="true" />
+      <Association Name="HoaDon_ThongTinHoaDon" Member="HoaDon" ThisKey="MaHoaDon" OtherKey="MaHoaDon" Type="HoaDon" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

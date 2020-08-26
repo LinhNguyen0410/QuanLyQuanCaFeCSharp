@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6968F40B-D051-4548-8BC8-D8F7DFA7D201}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyQuanCaFe</RootNamespace>
+    <AssemblyName>QuanLyQuanCaFe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controler.cs" />
+    <Compile Include="dbQLQuanCaFe.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbQLQuanCaFe.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyBan.Designer.cs">
+      <DependentUpon>frmQuanLyBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyBan.resx">
+      <DependentUpon>frmQuanLyBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="dbQLQuanCaFe.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbQLQuanCaFe.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbQLQuanCaFe.dbml.layout">
+      <DependentUpon>dbQLQuanCaFe.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_bcbd6c18332885-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_aa9501df489c885cce3f31b0fc6234ef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-coffee-beans-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-messi-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-book-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restoredb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-basket-add-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-switch-camera-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-land-sales-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pay-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-get-a-discount-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-static-view-level1-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mark-view-as-non-hidden-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ball-point-pen-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combo-chart-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combo-chart-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-property-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vietnamese-coffee-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cafe-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cafe-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-go-back-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-go-back-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inquiry-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-coffee-to-go-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-man-in-blue-jacket-information-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-device-manager-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe-sach-den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20170206174036-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-anh-ly-cafe-dep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-pha-tra-sua-dep_062227481.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trachanhlucbao-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuoc-tang-luc-sting-dau-sleek-lon-330ml-4-org.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coca-cola-glass-bottle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepsiRGB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bi-quyet-chien-khoai-tay-thom-ngon-gion-rum-an-hoai-khong-chan-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cach-lam-banh-mi-thit-nuong-600x325.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pho-mai-que.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khanhcasa-1-4837-1444957667.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-trash-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messi-Png-Messi-transparent-backgground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-repeat-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58b6ef10b35d7b1a1f43ffbb51ce09f5-dollar-bill-by-vexels.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
